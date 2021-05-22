@@ -7,6 +7,14 @@ class WidgetImportExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(customText);
+    return Container(
+      width: 40,
+      margin: EdgeInsets.all(6),
+      child: Text(
+        customText,
+        style: TextStyle(fontSize: 12),
+        textAlign: TextAlign.left,
+      ),
+    );
   }
 }

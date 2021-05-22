@@ -1,3 +1,4 @@
+import 'package:devit/Examples/CallbackWidgetExample.dart';
 import 'package:devit/Examples/WidgetImportExample.dart';
 import 'package:flutter/material.dart';
 
@@ -51,6 +52,7 @@ class MyAppState extends State<MyApp> {
                     onPressed: () => print('Anonymous Function'),
                     child: Text('Button Text'),
                   ),
+                  CallbackWidgetExample(stateFunctionExample),
                 ],
               ),
             ],

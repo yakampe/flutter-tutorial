@@ -10,7 +10,7 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
-  int stateChangeCount = 0;
+  int _stateChangeCount = 0;
 
   void functionExample() {
     print('Prints to console');
@@ -18,7 +18,7 @@ class MyAppState extends State<MyApp> {
 
   void stateFunctionExample() {
     setState(() {
-      stateChangeCount += 1;
+      _stateChangeCount += 1;
     });
   }
 
@@ -34,7 +34,7 @@ class MyAppState extends State<MyApp> {
                 children: [
                   Text('ROW1COL1,'),
                   Text('ROW1COL2,'),
-                  Text('State Has Changed $stateChangeCount times'),
+                  Text('State Has Changed $_stateChangeCount times'),
                   ElevatedButton(
                     onPressed: stateFunctionExample,
                     child: Text('Change State'),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WidgetImportExample extends StatelessWidget {
-  String customText;
+  final String customText;
 
   WidgetImportExample(this.customText);
 

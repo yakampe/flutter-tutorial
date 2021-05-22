@@ -12,6 +12,11 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
+  var _listExample = [
+    {'parameter': '1st Object Parameter Property Value'},
+    {'parameter': '2nd Object Parameter Property Value'}
+  ];
+
   int _stateChangeCount = 0;
 
   void functionExample() {
@@ -53,6 +58,9 @@ class MyAppState extends State<MyApp> {
                     child: Text('Button Text'),
                   ),
                   CallbackWidgetExample(stateFunctionExample),
+                  ..._listExample.map((obj) {
+                    return Text(obj['parameter']);
+                  }).toList(),
                 ],
               ),
             ],

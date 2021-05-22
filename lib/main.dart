@@ -1,3 +1,4 @@
+import 'package:devit/Examples/WidgetImportExample.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -45,6 +46,7 @@ class MyAppState extends State<MyApp> {
                 children: [
                   Text('ROW2COL1,'),
                   Text('ROW2COL2,'),
+                  WidgetImportExample(),
                   ElevatedButton(
                     onPressed: () => print('Anonymous Function'),
                     child: Text('Button Text'),

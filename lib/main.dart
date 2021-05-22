@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
+
+
 class MyApp extends StatelessWidget {
+  void functionExample() {
+    print('Prints to console');
+  }
+
   Widget build(BuildContext ctx) {
     return MaterialApp(
       home: Scaffold(
@@ -16,6 +22,7 @@ class MyApp extends StatelessWidget {
                   Text('ROW1COL1,'),
                   Text('ROW1COL2,'),
                   ElevatedButton(
+                    onPressed: functionExample,
                     child: Text('Button Text'),
                   )
                 ],

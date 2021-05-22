@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-
-
 class MyApp extends StatelessWidget {
   void functionExample() {
     print('Prints to console');
@@ -32,7 +30,7 @@ class MyApp extends StatelessWidget {
                   Text('ROW2COL1,'),
                   Text('ROW2COL2,'),
                   ElevatedButton(
-                    onPressed: () => {},
+                    onPressed: () => print('Anonymous Function'),
                     child: Text('Button Text'),
                   ),
                 ],

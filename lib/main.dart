@@ -46,7 +46,7 @@ class MyAppState extends State<MyApp> {
                 children: [
                   Text('ROW2COL1,'),
                   Text('ROW2COL2,'),
-                  WidgetImportExample(),
+                  WidgetImportExample('PassedArgument'),
                   ElevatedButton(
                     onPressed: () => print('Anonymous Function'),
                     child: Text('Button Text'),

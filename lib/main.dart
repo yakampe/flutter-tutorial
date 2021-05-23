@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:devit/Examples/CallbackWidgetExample.dart';
+import 'package:devit/Examples/InputWidgetExample.dart';
 import 'package:devit/Examples/WidgetImportExample.dart';
 import 'package:flutter/material.dart';
 
@@ -90,6 +89,20 @@ class MyAppState extends State<MyApp> {
                             )
                           ],
                         ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(20),
+                child: Row(
+                  children: [
+                    Card(
+                      child: Container(
+                          width: 240,
+                          margin: EdgeInsets.all(30),
+                          child: InputWidgetExample()
                       ),
                     )
                   ],

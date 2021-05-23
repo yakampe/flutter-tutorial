@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:devit/Examples/CallbackWidgetExample.dart';
 import 'package:devit/Examples/WidgetImportExample.dart';
 import 'package:flutter/material.dart';
@@ -35,35 +37,66 @@ class MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('AppBar Title'),
         ),
-        body: Row(
-          children: [
-            Column(
-              children: [
-                Text('ROW1COL1,'),
-                Text('ROW1COL2,'),
-                Text('State Has Changed $_stateChangeCount times'),
-                ElevatedButton(
-                  onPressed: stateFunctionExample,
-                  child: Text('Change State'),
+        body: Container(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Column(
+                    children: [
+                      Text('ROW1COL1,'),
+                      Text('ROW1COL2,'),
+                      Text('State Has Changed $_stateChangeCount times'),
+                      ElevatedButton(
+                        onPressed: stateFunctionExample,
+                        child: Text('Change State'),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text('ROW2COL1,'),
+                      Text('ROW2COL2,'),
+                      WidgetImportExample('PassedArgument'),
+                      ElevatedButton(
+                        onPressed: () => print('Anonymous Function'),
+                        child: Text('Button Text'),
+                      ),
+                      CallbackWidgetExample(stateFunctionExample),
+                      ..._listExample.map((obj) {
+                        return Text(obj['parameter']);
+                      }).toList(),
+                    ],
+                  ),
+                ],
+              ),
+              Container(
+                margin: EdgeInsets.all(20),
+                child: Row(
+                  children: [
+                    Card(
+                      child: Container(
+                        margin: EdgeInsets.all(30),
+                        child: Column(
+                          children: [
+                            Text('Widget Example title'),
+                            Container(
+                              width: 200,
+                              child: Text(
+                                'Widget itself',
+                                style: TextStyle(),
+                                textAlign: TextAlign.left,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
                 ),
-              ],
-            ),
-            Column(
-              children: [
-                Text('ROW2COL1,'),
-                Text('ROW2COL2,'),
-                WidgetImportExample('PassedArgument'),
-                ElevatedButton(
-                  onPressed: () => print('Anonymous Function'),
-                  child: Text('Button Text'),
-                ),
-                CallbackWidgetExample(stateFunctionExample),
-                ..._listExample.map((obj) {
-                  return Text(obj['parameter']);
-                }).toList(),
-              ],
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );

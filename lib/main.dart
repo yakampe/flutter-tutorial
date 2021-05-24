@@ -1,4 +1,5 @@
 import 'package:devit/Examples/CallbackWidgetExample.dart';
+import 'package:devit/Examples/DatePickerWidgetExample.dart';
 import 'package:devit/Examples/FlexWidgetExample.dart';
 import 'package:devit/Examples/InputWidgetExample.dart';
 import 'package:devit/Examples/ListTileWidgetExample.dart';
@@ -69,6 +70,7 @@ class MyAppState extends State<MyApp> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                DatePickerWidgetExample(),
                 ListTileWidgetExample(),
                 FlexWidgetExample(),
                 Column(

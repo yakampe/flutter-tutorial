@@ -36,6 +36,10 @@ class MyAppState extends State<MyApp> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('AppBar Title'),
+          actions: [
+            IconButton(icon: Icon(Icons.alternate_email), onPressed: () {}),
+            IconButton(icon: Icon(Icons.expand), onPressed: () {}),
+          ],
         ),
         body: Container(
           child: SingleChildScrollView(
@@ -104,8 +108,7 @@ class MyAppState extends State<MyApp> {
                         child: Container(
                             width: 240,
                             margin: EdgeInsets.all(30),
-                            child: InputWidgetExample()
-                        ),
+                            child: InputWidgetExample()),
                       )
                     ],
                   ),

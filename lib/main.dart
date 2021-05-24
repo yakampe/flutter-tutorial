@@ -46,6 +46,9 @@ class MyAppState extends State<MyApp> {
 
   Widget build(BuildContext ctx) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.brown
+      ),
       home: Scaffold(
         //showModalBottomSheet tries to access the ancestor of type MaterialApp
         //from the given context so we need to wrap it into a builder if at root level

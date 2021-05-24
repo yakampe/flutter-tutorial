@@ -1,5 +1,6 @@
 import 'package:devit/Examples/CallbackWidgetExample.dart';
 import 'package:devit/Examples/InputWidgetExample.dart';
+import 'package:devit/Examples/ListViewWidgetExample.dart';
 import 'package:devit/Examples/WidgetImportExample.dart';
 import 'package:flutter/material.dart';
 
@@ -109,6 +110,7 @@ class MyAppState extends State<MyApp> {
                     ],
                   ),
                 ),
+                ListViewWidgetExample(),
               ],
             ),
           ),

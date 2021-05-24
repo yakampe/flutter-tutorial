@@ -34,6 +34,10 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext ctx) {
     return MaterialApp(
       home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.ac_unit)
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
         appBar: AppBar(
           title: Text('AppBar Title'),
           actions: [

@@ -1,7 +1,7 @@
 import 'package:devit/Examples/CallbackWidgetExample.dart';
+import 'package:devit/Examples/FlexWidgetExample.dart';
 import 'package:devit/Examples/InputWidgetExample.dart';
 import 'package:devit/Examples/ListViewWidgetExample.dart';
-import 'package:devit/Examples/NamedArgumentClassExample.dart';
 import 'package:devit/Examples/WidgetImportExample.dart';
 import 'package:flutter/material.dart';
 
@@ -68,6 +68,7 @@ class MyAppState extends State<MyApp> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                FlexWidgetExample(),
                 Column(
                   children: [
                     Text('Image Example'),

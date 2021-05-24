@@ -1,6 +1,7 @@
 import 'package:devit/Examples/CallbackWidgetExample.dart';
 import 'package:devit/Examples/InputWidgetExample.dart';
 import 'package:devit/Examples/ListViewWidgetExample.dart';
+import 'package:devit/Examples/NamedArgumentClassExample.dart';
 import 'package:devit/Examples/WidgetImportExample.dart';
 import 'package:flutter/material.dart';
 
@@ -31,11 +32,28 @@ class MyAppState extends State<MyApp> {
     });
   }
 
+  void _modalBottomSheetExample(BuildContext ctx) {
+    showModalBottomSheet(
+      context: ctx,
+      builder: (_) {
+        return GestureDetector(
+            onTap: () {},
+            behavior: HitTestBehavior.opaque,
+            child: InputWidgetExample());
+      },
+    );
+  }
+
   Widget build(BuildContext ctx) {
     return MaterialApp(
       home: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.ac_unit)
+        //showModalBottomSheet tries to access the ancestor of type MaterialApp
+        //from the given context so we need to wrap it into a builder if at root level
+        floatingActionButton: Builder(
+          builder: (pCtx) => FloatingActionButton(
+            child: Icon(Icons.ac_unit),
+            onPressed: () => _modalBottomSheetExample(pCtx),
+          ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
         appBar: AppBar(

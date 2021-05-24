@@ -8,7 +8,7 @@ class InputWidgetExample extends StatefulWidget {
 }
 
 class InputWidgetStateExample extends State<InputWidgetExample> {
-  String input = '';
+  String input = '0';
 
 
   @override

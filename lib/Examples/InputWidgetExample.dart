@@ -18,6 +18,7 @@ class InputWidgetStateExample extends State<InputWidgetExample> {
       children: [
         Text('Input Example'),
         TextField(
+          keyboardType: TextInputType.numberWithOptions(decimal: true),
           onSubmitted: (val) {
             setState(() {
               this.input = val;
@@ -30,7 +31,7 @@ class InputWidgetStateExample extends State<InputWidgetExample> {
           margin: EdgeInsets.only(top: 16),
           child: Text('Output'),
         ),
-        Text(input)
+        Text(double.parse(input).toStringAsFixed(10))
       ],
     );
   }

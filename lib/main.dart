@@ -46,9 +46,7 @@ class MyAppState extends State<MyApp> {
 
   Widget build(BuildContext ctx) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.brown
-      ),
+      theme: ThemeData(primarySwatch: Colors.brown),
       home: Scaffold(
         //showModalBottomSheet tries to access the ancestor of type MaterialApp
         //from the given context so we need to wrap it into a builder if at root level
@@ -70,6 +68,21 @@ class MyAppState extends State<MyApp> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                Column(
+                  children: [
+                    Text('Image Example'),
+                    Container(
+                      margin: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black),
+                      ),
+                      child: Image.asset(
+                        'assets/images/me.png',
+                        scale: 2,
+                      ),
+                    ),
+                  ],
+                ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
